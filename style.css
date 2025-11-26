@@ -1,0 +1,339 @@
+/* RESET & BASE STYLES */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: linear-gradient(180deg, #174a97, #0c1c53);
+  color: white;
+}
+
+/* NAVBAR */
+.navbar {
+  position: fixed;   
+  top: 0;            
+  left: 0;
+  width: 100%;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(12, 28, 83, 0.85);
+  z-index: 1000;     
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.7;
+}
+
+.menu-btn {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+
+/* HERO SECTION */
+.hero-full {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* Hero background image */
+.hero-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Dim overlay */
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.45);
+  z-index: 1;
+}
+
+/* Hero content */
+.hero-content {
+  position: absolute;
+  bottom: 4vh;     
+  left: 4vw;     
+  max-width: 60vw; 
+  color: white;
+  z-index: 2;
+  padding: 2vw;   
+}
+
+.hero-content h1 {
+  font-size: 4vw;  
+  font-weight: 900;
+}
+
+.hero-content h2 {
+  font-size: 2.5vw;
+  font-weight: 700;
+  margin-bottom: 0.3em;
+}
+
+.hero-content p {
+  font-size: 1.3vw;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+/* SECTIONS */
+.section {
+  padding: 40px 20px;
+  text-align: center;
+}
+
+/* ABOUT & CERTIFICATES */
+#about h2 {
+  margin-bottom: 40px;  
+  font-size: 1.5vw;
+}
+
+.about-grid,
+.cert-grid {
+  display: grid;
+  justify-content: center;
+  gap: 20px;
+}
+
+.about-grid {
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+}
+
+/* CERTIFICATES */
+#certificates, .cert-grid {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  text-align: center;
+}
+
+#certificates h2 {
+  margin-bottom: 40px;  
+    font-size: 1.5vw;
+}
+
+/* Center and size the certificate images like About section */
+.cert-grid {
+  display: grid;
+  justify-content: center; 
+  gap: 20px;               
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); 
+}
+
+.cert {
+  width: 100%;
+  max-width: 500px;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 8px;
+  margin: 0 auto;            
+  transition: transform 0.3s ease; 
+}
+
+.profile {
+  width: 50%;
+  aspect-ratio: 1 / 1; 
+  object-fit: cover;    
+  margin-bottom: 10px;
+  border-radius: 8px;  
+}
+
+.about-lore {
+  max-width: 800px;
+  margin: 40px auto 0; 
+  font-size: 1.5rem;
+  line-height: 1.6;
+  text-align: center;
+  color: #f0f0f0;
+}
+
+/* WORK SECTIONS - Updated */
+.work-row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;       
+  padding: 50px 0; 
+}
+
+.work-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.work-img {
+  width: 300px;           
+  aspect-ratio: 5 / 4;   
+  object-fit: cover;      
+  border-radius: 8px;  
+}
+
+.work-text {
+  max-width: 500px; 
+  text-align: left;
+}
+
+.work-text h3 {
+  font-size: 2rem;  
+  margin-bottom: 0.5em;
+}
+
+.work-text p {
+  font-size: 1.2rem; 
+  line-height: 1.6;
+  margin-bottom: 0.5em;
+}
+
+/* CONTACT */
+.section h2 {
+  margin-bottom: 40px;
+  font-size: 1.5vw;
+}
+
+.contact-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 60px;
+  padding: 60px 0;
+}
+
+.contact-img {
+  width: 380px;
+  aspect-ratio: 5 / 4;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.contact-text {
+  font-size: 1.4rem;
+  line-height: 1.6;
+}
+
+.contact-text h3 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+}
+
+.contact-icons {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 25px;
+}
+
+.circle {
+  width: 25px;
+  height: 25px;
+  background: rgba(255,255,255,0.7);
+  border-radius: 50%;
+}
+
+/* BG ELEMENTS */
+.section > *:not(.shapes-bg) {
+  position: relative;
+  z-index: 2;
+}
+
+.with-bg {
+  position: relative;
+  overflow: hidden; 
+}
+
+.shapes-bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; 
+  z-index: 0;
+}
+
+.shape-circle,
+.shape-triangle,
+.shape-x {
+  position: absolute;
+  font-size: 120px;
+  opacity: 0.12;
+  z-index: -1; 
+}
+
+/* MOBILE / HAMBURGER MENU */
+@media (max-width: 768px) {
+
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -260px;
+    background: #0b1a45;
+    height: 100vh;
+    width: 260px;
+    padding-top: 80px;
+    padding-left: 30px;
+    flex-direction: column;
+    gap: 25px;
+    transition: 0.3s ease;
+    z-index: 999;
+  }
+
+  .nav-links.open {
+    right: 0;
+  }
+
+  .menu-btn {
+    display: block;
+    z-index: 1000;
+    position: relative;
+  }
+
+  /* Work & Contact stack vertically */
+  .work-row,
+  .work-row.reverse {
+    flex-direction: column;
+  }
+
+  .work-img,
+  .contact-wrap {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .contact-text {
+    text-align: center;
+  }
+
+  .contact-img {
+    width: 90%; 
+  }
+}
